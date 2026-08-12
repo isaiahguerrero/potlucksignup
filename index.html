@@ -93,15 +93,12 @@
 <body>
 
 <h1>🎉 Halloween Potluck Sign-Up</h1>
-<p class="sub">Add your name, a 4-digit PIN (so only you can edit or delete your entry later), and what you're bringing.</p>
+<p class="sub">Add your name and what you're bringing.</p>
 
 <div class="form-card">
   <div class="form-title" id="formTitle">Add yourself</div>
-  <div class="form-hint">Remember your PIN — you'll need it again to edit or delete your entry.</div>
   <label for="fName">Your name</label>
   <input type="text" id="fName" placeholder="e.g. Isaiah">
-  <label for="fPin">4-digit PIN</label>
-  <input type="text" id="fPin" placeholder="e.g. 4821" maxlength="4" inputmode="numeric">
   <label for="fFood">What you're bringing</label>
   <input type="text" id="fFood" placeholder="e.g. Elote pasta salad">
   <div class="checks">
@@ -200,15 +197,8 @@ function render() {
 function requestEdit(id) {
   const e = entries[id];
   if (!e) return;
-  const pin = prompt("Enter your 4-digit PIN to edit this entry:");
-  if (pin === null) return;
-  if (pin.trim() !== e.pin) {
-    setStatus("Wrong PIN for this entry.");
-    return;
-  }
   editingId = id;
   document.getElementById('fName').value = e.name;
-  document.getElementById('fPin').value = e.pin;
   document.getElementById('fFood').value = e.food;
   document.getElementById('fGF').checked = !!e.gf;
   document.getElementById('fDF').checked = !!e.df;
@@ -221,7 +211,6 @@ function requestEdit(id) {
 function cancelEdit() {
   editingId = null;
   document.getElementById('fName').value = '';
-  document.getElementById('fPin').value = '';
   document.getElementById('fFood').value = '';
   document.getElementById('fGF').checked = false;
   document.getElementById('fDF').checked = false;
@@ -236,7 +225,6 @@ function setFormDisabled(disabled) {
 
 async function submitEntry() {
   const name = document.getElementById('fName').value.trim();
-  const pin = document.getElementById('fPin').value.trim();
   const food = document.getElementById('fFood').value.trim();
   const gf = document.getElementById('fGF').checked;
   const df = document.getElementById('fDF').checked;
@@ -245,13 +233,9 @@ async function submitEntry() {
     setStatus("Enter your name and what you're bringing.");
     return;
   }
-  if (!/^\d{4}$/.test(pin)) {
-    setStatus("PIN must be exactly 4 digits.");
-    return;
-  }
 
   setFormDisabled(true);
-  const payload = { name, pin, food, gf, df };
+  const payload = { name, food, gf, df };
 
   try {
     if (editingId) {
@@ -287,12 +271,6 @@ async function submitEntry() {
 async function requestDelete(id) {
   const e = entries[id];
   if (!e) return;
-  const pin = prompt("Enter your 4-digit PIN to delete this entry:");
-  if (pin === null) return;
-  if (pin.trim() !== e.pin) {
-    setStatus("Wrong PIN for this entry.");
-    return;
-  }
   if (!confirm("Remove this entry?")) return;
 
   try {
