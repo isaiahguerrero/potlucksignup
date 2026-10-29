@@ -7,16 +7,17 @@
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    max-width: 640px;
+    font-size: 26px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 24px 16px 60px;
     background: #5A0A0F;
     color: #ffffff;
   }
   html { background: #5A0A0F; }
-  h1 { font-size: 24px; margin-bottom: 4px; color: #ffffff; }
-  p.sub { color: #ffffff; opacity: 0.8; margin-top: 0; margin-bottom: 24px; }
-  h2.section-title { font-size: 17px; margin: 28px 0 12px; color: #ffffff; }
+  h1 { font-size: 34px; margin-bottom: 4px; color: #ffffff; }
+  p.sub { font-size: 26px; color: #ffffff; opacity: 0.8; margin-top: 0; margin-bottom: 24px; }
+  h2.section-title { font-size: 27px; margin: 28px 0 12px; color: #ffffff; }
   .card {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -31,8 +32,8 @@
     align-items: flex-start;
     gap: 8px;
   }
-  .entry-name { font-weight: 600; font-size: 15px; }
-  .entry-food { font-size: 14px; margin-top: 2px; }
+  .entry-name { font-weight: 600; font-size: 25px; }
+  .entry-food { font-size: 24px; margin-top: 2px; }
   .actions { display: flex; gap: 6px; flex-shrink: 0; }
   button {
     background: #ffffff;
@@ -40,7 +41,7 @@
     border: none;
     border-radius: 8px;
     padding: 6px 12px;
-    font-size: 13px;
+    font-size: 23px;
     font-weight: 600;
     cursor: pointer;
   }
@@ -58,7 +59,7 @@
     border: 1px solid rgba(255, 179, 179, 0.6);
   }
   button.danger:hover { background: rgba(255, 179, 179, 0.15); }
-  .empty { color: #ffffff; opacity: 0.7; font-style: italic; text-align: center; padding: 20px 0; }
+  .empty { font-size: 26px; color: #ffffff; opacity: 0.7; font-style: italic; text-align: center; padding: 20px 0; }
   .form-card {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -66,32 +67,32 @@
     padding: 16px;
     color: #ffffff;
   }
-  .form-title { font-weight: 600; margin-bottom: 4px; font-size: 15px; }
-  .form-hint { font-size: 12px; color: #ffffff; opacity: 0.7; margin-bottom: 8px; }
-  label { font-size: 13px; color: #ffffff; display: block; margin-bottom: 4px; margin-top: 10px; }
+  .form-title { font-weight: 600; margin-bottom: 4px; font-size: 25px; }
+  .form-hint { font-size: 22px; color: #ffffff; opacity: 0.7; margin-bottom: 8px; }
+  label { font-size: 23px; color: #ffffff; display: block; margin-bottom: 4px; margin-top: 10px; }
   input[type=text] {
     width: 100%;
     padding: 8px 10px;
     border: 1px solid #d8d2c4;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 24px;
   }
   .form-buttons { margin-top: 14px; display: flex; gap: 8px; }
-  #status { font-size: 13px; color: #ffffff; margin-top: 10px; min-height: 18px; }
+  #status { font-size: 23px; color: #ffffff; margin-top: 10px; min-height: 18px; }
   .radios { display: flex; gap: 16px; margin-top: 10px; }
-  .radios label { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 14px; color: #ffffff; }
+  .radios label { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 24px; color: #ffffff; }
   .radios input { width: auto; }
   .columns { display: flex; gap: 16px; }
   .column { flex: 1; min-width: 0; }
-  .column-title { font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 10px; }
-  @media (max-width: 480px) {
+  .column-title { font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 10px; }
+  @media (max-width: 700px) {
     .columns { flex-direction: column; }
   }
 </style>
 </head>
 <body>
 
-<h1>🪩🤍 CLUB SORAYA: 23 AFTER DARK (Potluck Sign-Up)</h1>
+<h1>🪩 CLUB SORAYA: 23 AFTER DARK (Potluck Sign-Up)</h1>
 <p class="sub">Add your name, what you're bringing, and whether it's food or a drink.</p>
 
 <div class="form-card">
