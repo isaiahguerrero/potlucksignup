@@ -10,18 +10,20 @@
     max-width: 640px;
     margin: 0 auto;
     padding: 24px 16px 60px;
-    background: #faf8f5;
-    color: #2c2a26;
+    background: #5A0A0F;
+    color: #ffffff;
   }
-  h1 { font-size: 24px; margin-bottom: 4px; }
-  p.sub { color: #6b6862; margin-top: 0; margin-bottom: 24px; }
-  h2.section-title { font-size: 17px; margin: 28px 0 12px; color: #2c2a26; }
+  html { background: #5A0A0F; }
+  h1 { font-size: 24px; margin-bottom: 4px; color: #ffffff; }
+  p.sub { color: #ffffff; opacity: 0.8; margin-top: 0; margin-bottom: 24px; }
+  h2.section-title { font-size: 17px; margin: 28px 0 12px; color: #ffffff; }
   .card {
-    background: #fff;
-    border: 1px solid #e7e3da;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     padding: 16px;
     margin-bottom: 14px;
+    color: #ffffff;
   }
   .entry-top {
     display: flex;
@@ -33,38 +35,40 @@
   .entry-food { font-size: 14px; margin-top: 2px; }
   .actions { display: flex; gap: 6px; flex-shrink: 0; }
   button {
-    background: #8a5a2b;
-    color: #fff;
+    background: #ffffff;
+    color: #5A0A0F;
     border: none;
     border-radius: 8px;
     padding: 6px 12px;
     font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
   }
-  button:hover { background: #714a22; }
+  button:hover { background: #f1dcdc; }
   button:disabled { opacity: 0.6; cursor: not-allowed; }
   button.secondary {
-    background: #fff;
-    color: #8a5a2b;
-    border: 1px solid #d8c4a8;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
   }
-  button.secondary:hover { background: #f5efe4; }
+  button.secondary:hover { background: rgba(255, 255, 255, 0.15); }
   button.danger {
-    background: #fff;
-    color: #a33a2a;
-    border: 1px solid #e0b6ab;
+    background: transparent;
+    color: #ffb3b3;
+    border: 1px solid rgba(255, 179, 179, 0.6);
   }
-  button.danger:hover { background: #fdf0ee; }
-  .empty { color: #9a9184; font-style: italic; text-align: center; padding: 20px 0; }
+  button.danger:hover { background: rgba(255, 179, 179, 0.15); }
+  .empty { color: #ffffff; opacity: 0.7; font-style: italic; text-align: center; padding: 20px 0; }
   .form-card {
-    background: #fff;
-    border: 1px solid #e7e3da;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 12px;
     padding: 16px;
+    color: #ffffff;
   }
   .form-title { font-weight: 600; margin-bottom: 4px; font-size: 15px; }
-  .form-hint { font-size: 12px; color: #9a9184; margin-bottom: 8px; }
-  label { font-size: 13px; color: #6b6862; display: block; margin-bottom: 4px; margin-top: 10px; }
+  .form-hint { font-size: 12px; color: #ffffff; opacity: 0.7; margin-bottom: 8px; }
+  label { font-size: 13px; color: #ffffff; display: block; margin-bottom: 4px; margin-top: 10px; }
   input[type=text] {
     width: 100%;
     padding: 8px 10px;
@@ -73,13 +77,13 @@
     font-size: 14px;
   }
   .form-buttons { margin-top: 14px; display: flex; gap: 8px; }
-  #status { font-size: 13px; color: #6b6862; margin-top: 10px; min-height: 18px; }
+  #status { font-size: 13px; color: #ffffff; margin-top: 10px; min-height: 18px; }
   .radios { display: flex; gap: 16px; margin-top: 10px; }
-  .radios label { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 14px; color: #2c2a26; }
+  .radios label { display: flex; align-items: center; gap: 6px; margin: 0; font-size: 14px; color: #ffffff; }
   .radios input { width: auto; }
   .columns { display: flex; gap: 16px; }
   .column { flex: 1; min-width: 0; }
-  .column-title { font-size: 14px; font-weight: 700; color: #8a5a2b; margin-bottom: 10px; }
+  .column-title { font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 10px; }
   @media (max-width: 480px) {
     .columns { flex-direction: column; }
   }
@@ -87,7 +91,7 @@
 </head>
 <body>
 
-<h1>🪩 2000's/Y2K Potluck Sign-Up</h1>
+<h1>🪩 CLUB SORAYA: 23 AFTER DARK (Potluck Sign-Up)</h1>
 <p class="sub">Add your name, what you're bringing, and whether it's food or a drink.</p>
 
 <div class="form-card">
